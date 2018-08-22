@@ -10,24 +10,24 @@ class Test(unittest.TestCase):
 		resultado = src.cotizador.cotizar_seguro("Guayaquil",18, "mujer","soltero","",0)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 40.00")
 
-	#Mujer, casada, 30 años, sin hijos, Guayaquil
+	#Mujer, casada, 30 años, sin hijos, Cuenca
 	def test_cotizador_2(self):
-		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","casado","",1)
+		resultado = src.cotizador.cotizar_seguro("Cuenca",30, "mujer","casado","",1)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 80.00")
 
-	#Mujer, casada, 30 años, 1 hijos, Guayaquil
+	#Mujer, casada, 30 años, 1 hijos, Cuenca
 	def test_cotizador_3(self):
-		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","casado","",2)
+		resultado = src.cotizador.cotizar_seguro("Cuenca",30, "mujer","casado","",2)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 110.00")
 	
-	#Mujer, casada, 30 años, 2 hijos, Guayaquil
+	#Mujer, casada, 30 años, 2 hijos, Cuenca
 	def test_cotizador_4(self):
-		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","casado","",3)
+		resultado = src.cotizador.cotizar_seguro("Cuenca",30, "mujer","casado","",3)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 120.00")
 
-	#Mujer, casada, 30 años, 3 hijos, Guayaquil
+	#Mujer, casada, 30 años, 3 hijos, Cuenca
 	def test_cotizador_5(self):
-		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","casado","",4)
+		resultado = src.cotizador.cotizar_seguro("Cuenca",30, "mujer","casado","",4)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 140.00")
 
 	#Mujer, soltera, 50 años, osteoporosis, Guayaquil
@@ -40,24 +40,24 @@ class Test(unittest.TestCase):
 		resultado = src.cotizador.cotizar_seguro("Guayaquil",70, "mujer","soltero","cancer",0)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 90.00")
 
-	#Mujer, casada, 50 años, sin hijos, osteoporosis, Guayaquil
+	#Mujer, casada, 50 años, sin hijos, osteoporosis, Machala
 	def test_cotizador_8(self):
-		resultado = src.cotizador.cotizar_seguro("Guayaquil",50, "mujer","casado","osteoporosis",1)
+		resultado = src.cotizador.cotizar_seguro("Machala",50, "mujer","casado","osteoporosis",1)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 95.00")
 
-	#Mujer, casada, 50 años, 1 hijos, osteoporosis, Guayaquil
+	#Mujer, casada, 50 años, 1 hijos, osteoporosis, Machala
 	def test_cotizador_9(self):
-		resultado = src.cotizador.cotizar_seguro("Guayaquil",50, "mujer","casado","osteoporosis",2)
+		resultado = src.cotizador.cotizar_seguro("Machala",50, "mujer","casado","osteoporosis",2)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 125.00")
 
-	#Mujer, casada, 50 años, 2 hijos, osteoporosis, Guayaquil
+	#Mujer, casada, 50 años, 2 hijos, osteoporosis, Machala
 	def test_cotizador_10(self):
-		resultado = src.cotizador.cotizar_seguro("Guayaquil",50, "mujer","casado","osteoporosis",3)
+		resultado = src.cotizador.cotizar_seguro("Machala",50, "mujer","casado","osteoporosis",3)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 135.00")
 
-	#Mujer, casada, 50 años, 3 hijos, osteoporosis, Guayaquil
+	#Mujer, casada, 50 años, 3 hijos, osteoporosis, Machala
 	def test_cotizador_11(self):
-		resultado = src.cotizador.cotizar_seguro("Guayaquil",50, "mujer","casado","osteoporosis",4)
+		resultado = src.cotizador.cotizar_seguro("Machala",50, "mujer","casado","osteoporosis",4)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 155.00")
 
 	#Mujer, casada, 70 años, sin hijos, cancer, Guayaquil
@@ -256,6 +256,26 @@ class Test(unittest.TestCase):
 	#Hombre, divorciado, 30 años, 4 hijos, Guayaquil
 	def test_cotizador_49(self):
 		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "hombre","divorciado","",4)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 120.00")
+
+	#Hombre, divorciado, 30 años, 1 hijos, Quito
+	def test_cotizador_50(self):
+		resultado = src.cotizador.cotizar_seguro("Quito",30, "hombre","divorciado","",1)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 60.00")
+
+	#Hombre, divorciado, 30 años, 2 hijos, Quito
+	def test_cotizador_51(self):
+		resultado = src.cotizador.cotizar_seguro("Quito",30, "hombre","divorciado","",2)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 90.00")
+
+	#Hombre, divorciado, 30 años, 3 hijos, Quito
+	def test_cotizador_52(self):
+		resultado = src.cotizador.cotizar_seguro("Quito",30, "hombre","divorciado","",3)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 100.00")
+
+	#Hombre, divorciado, 30 años, 4 hijos, Quito
+	def test_cotizador_53(self):
+		resultado = src.cotizador.cotizar_seguro("Quito",30, "hombre","divorciado","",4)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 120.00")
 
 
