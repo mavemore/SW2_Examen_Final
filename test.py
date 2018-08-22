@@ -139,10 +139,6 @@ class Test(unittest.TestCase):
 		especial = ''
 		cotizado = cotizador.cotizar_seguro(ciudad, edad, sexo, estado_civil, especial, dependientes)
 		self.assertEqual(cotizado, "La edad ingresada no es válida. Debe de encontrarse entre 18 y 75 años.")
-	# def test_cotizador_ID1(self):
-	# 	self.assertEqual('','')
-	# 	cotizado = cotizador.cotizar_seguro('Guayaquil', 18, 'homre', 'casado', '', 0)
-	# 	print cotizado
 
 if __name__ == '__main__':
 	unittest.main()
