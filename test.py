@@ -177,5 +177,32 @@ class Test(unittest.TestCase):
 
 
 
+	def test_cotizador_ID_32(self):
+		resultado = src.cotizador.calcular_cuota_basica(0);
+		self.assertEqual(resultado, 30)
+
+	def test_cotizador_ID_33(self):
+		resultado = src.cotizador.calcular_cuota_basica(1);
+		self.assertEqual(resultado, 60)
+
+	def test_cotizador_ID_34(self):
+		resultado = src.cotizador.calcular_cuota_basica(2);
+		self.assertEqual(resultado, 90)
+
+	def test_cotizador_ID_35(self):
+		resultado = src.cotizador.calcular_cuota_basica(3);
+		self.assertEqual(resultado, 100)
+
+
+	def test_cotizador_ID_35(self):
+		resultado = src.cotizador.calcular_cuota_basica(4);
+		self.assertEqual(resultado, 120)
+
+
+
+
+
+
 if __name__ == '__main__':
+	resultado = src.c
 	unittest.main()
