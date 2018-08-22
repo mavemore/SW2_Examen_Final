@@ -204,5 +204,4 @@ class Test(unittest.TestCase):
 
 
 if __name__ == '__main__':
-	resultado = src.c
 	unittest.main()
