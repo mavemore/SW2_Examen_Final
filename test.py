@@ -37,21 +37,25 @@ class Test(unittest.TestCase):
 	def test_cotizador_7(self):
 		self.assertEqual("Saludcita no opera en la ciudad ingresada.", cotizar_seguro('Loja', 65, 'hombre', 'soltero', 'diabetes', 4))
 		
-	#Cotizar seguro de mujer soltera de 80 años, de Machala que tiene cáncer y 1 dependiente
+	#Cotizar seguro de mujer soltera de 35 años, de Machala que tiene cáncer y 1 dependiente
 	def test_cotizador_8(self):
 		self.assertEqual("El valor calculado de su cotización es de 70.00", cotizar_seguro('Machala', 35, 'mujer', 'soltero', 'cancer', 1))
 		
-	#Cotizar seguro de hombre soltero de 65 años, de Loja que tiene diabetes y 4 dependientes
+	#Cotizar seguro de hombre soltero de 65 años, de Quito que tiene diabetes y 4 dependientes
 	def test_cotizador_9(self):
 		self.assertEqual("El valor calculado de su cotización es de 170.00", cotizar_seguro('Quito', 65, 'hombre', 'soltero', 'diabetes', 4))
 		
-	#Cotizar seguro de hombre soltero de 65 años, de Loja que tiene diabetes y 4 dependientes
+	#Cotizar seguro de hombre soltero de 50 años, de Quito que tiene osteoporosis y 4 dependientes
 	def test_cotizador_10(self):
 		self.assertEqual("El valor calculado de su cotización es de 155.00", cotizar_seguro('Quito', 50, 'mujer', 'soltero', 'osteoporosis', 4))
 		
-	#Cotizar seguro de hombre soltero de 65 años, de Loja que tiene diabetes y 4 dependientes
+	#Cotizar seguro de hombre soltero de 62 años, de Quito que no tiene prexistencias y 4 dependientes
 	def test_cotizador_11(self):
 		self.assertEqual("El valor calculado de su cotización es de 120.00", cotizar_seguro('Quito', 62, 'hombre', 'soltero', 'ninguna', 4))
+		
+	#Cotizar seguro de hombre soltero de 30 años, de Quito que no tiene prexistencias y 4 dependientes
+	def test_cotizador_12(self):
+		self.assertEqual("El valor calculado de su cotización es de 160.00", cotizar_seguro('Quito', 30, 'hombre', 'soltero', 'ninguna', 4))
 	
 if __name__ == '__main__':
 	unittest.main()
