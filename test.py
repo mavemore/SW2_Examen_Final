@@ -194,10 +194,34 @@ class Test(unittest.TestCase):
 		self.assertEqual(resultado, 100)
 
 
-	def test_cotizador_ID_35(self):
+	def test_cotizador_ID_36(self):
 		resultado = src.cotizador.calcular_cuota_basica(4);
 		self.assertEqual(resultado, 120)
 
+	def test_cotizador_ID_37(self):
+		resultado = src.cotizador.calcular_valores_adicionales(20, "mujer", "soltero", "")
+		self.assertEqual(resultado, 40)
+
+	def test_cotizador_ID_38(self):
+		resultado = src.cotizador.calcular_valores_adicionales(50, "mujer", "soltero", "osteoporosis")
+		self.assertEqual(resultado, 80)
+
+	def test_cotizador_ID_39(self):
+		resultado = src.cotizador.calcular_valores_adicionales(70, "mujer", "soltero", "diabetes")
+		self.assertEqual(resultado, 90)
+
+
+	def test_cotizador_ID_37(self):
+		resultado = src.cotizador.calcular_valores_adicionales(20, "hombre", "soltero", "")
+		self.assertEqual(resultado, 40)
+
+	def test_cotizador_ID_38(self):
+		resultado = src.cotizador.calcular_valores_adicionales(50, "hombre", "soltero", "infarto")
+		self.assertEqual(resultado, 50)
+
+	def test_cotizador_ID_39(self):
+		resultado = src.cotizador.calcular_valores_adicionales(70, "hombre", "soltero", "diabetes")
+		self.assertEqual(resultado, 50)
 
 
 
