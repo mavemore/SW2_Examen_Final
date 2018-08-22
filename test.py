@@ -119,6 +119,10 @@ class Test(unittest.TestCase):
 		resultado =  cotizar_seguro('Quito', 70, 'mujer', 'soltero', 'cancer', 4)
 		self.assertEqual(resultado,"El valor calculado de su cotización es de %.2f"%180)
 
+	def test_cotizar_9(self):
+		resultado =  cotizar_seguro('Quito', 50, 'mujer', 'soltero', 'osteoporosis', 4)
+		self.assertEqual(resultado,"El valor calculado de su cotización es de %.2f"%155)
+
 
 
 
