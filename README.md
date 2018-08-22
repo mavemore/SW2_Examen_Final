@@ -16,4 +16,4 @@
 
 		git push origin [nombre_apellido1_apellido2]
 		
-[![Coverage Status](https://coveralls.io/repos/github/mavemore/SW2_Examen_Parcial/badge.svg?branch=alex_ferrin_alcivar)](https://coveralls.io/github/mavemore/SW2_Examen_Final_tema_1?branch=alex_ferrin_alcivar)
+[![Coverage Status](https://coveralls.io/repos/github/mavemore/SW2_Examen_Parcial/badge.svg?branch=master)](https://coveralls.io/github/mavemore/SW2_Examen_Final_tema_1?branch=master)
