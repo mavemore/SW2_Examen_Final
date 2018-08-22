@@ -158,5 +158,45 @@ class Test(unittest.TestCase):
 		resultado = src.cotizador.cotizar_seguro("Guayaquil",70, "hombre","casado","cancer",4)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 170.00")
 
+	#Mujer, viuda, 30 años, Guayaquil
+	def test_cotizador_30(self):
+		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","viudo","",0)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 40.00")
+
+	#Mujer, divorciada, 30 años, sin hijos, Guayaquil
+	def test_cotizador_31(self):
+		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","divorciado","",0)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 40.00")
+
+	#Hombre, viudo, 30 años, Guayaquil
+	def test_cotizador_32(self):
+		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "hombre","viudo","",0)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 30.00")
+
+	#Mujer, divorciado, 30 años, sin hijos, Guayaquil
+	def test_cotizador_33(self):
+		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "hombre","divorciado","",0)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 30.00")
+
+	#Mujer, viuda, 30 años, 1 hijos, Guayaquil
+	def test_cotizador_34(self):
+		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","viudo","",1)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 70.00")
+
+	#Mujer, viuda, 30 años, 2 hijos, Guayaquil
+	def test_cotizador_35(self):
+		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","viudo","",2)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 100.00")
+
+	#Mujer, viuda, 30 años, 3 hijos, Guayaquil
+	def test_cotizador_36(self):
+		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","viudo","",3)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 110.00")
+
+	#Mujer, viuda, 30 años, 4 hijos, Guayaquil
+	def test_cotizador_37(self):
+		resultado = src.cotizador.cotizar_seguro("Guayaquil",30, "mujer","viudo","",4)
+		self.assertEqual(resultado, "El valor calculado de su cotización es de 130.00")
+
 if __name__ == '__main__':
 	unittest.main()
