@@ -74,20 +74,34 @@ class Test(unittest.TestCase):
 		adicional =  calcular_valores_adicionales(70, 'hombre', 'soltero', 'cancer')
 		self.assertEqual(adicional,50)
 
+	
+	def test_calcular_valores_adicionales_8(self):
+		adicional =  calcular_valores_adicionales(70, 'hombre', 'soltero', 'diabetes')
+		self.assertEqual(adicional,50)
+
+
 
 	def test_cotizar_1(self):
 		resultado =  cotizar_seguro('Guayaquil', 35, 'mujer', 'casado', '', 4)
 		self.assertEqual(resultado,"El valor calculado de su cotización es de %.2f"%140)
+	
+
 	def test_cotizar_2(self):
 		resultado =  cotizar_seguro('Guayaquil', 80, 'mujer', 'casado', '', 4)
 		self.assertEqual(resultado,"La edad ingresada no es válida. Debe de encontrarse entre 18 y 75 años.")
+	
+
 	def test_cotizar_3(self):
 		resultado =  cotizar_seguro('Guayaquil', 60, 'mujer', 'casado', '', 7)
 		self.assertEqual(resultado,"Solo se puede realizar la cotización para hasta 4 dependientes en línea. \
 			Por favor acérquese a la agencia y presente una solicitud.")
+	
+
 	def test_cotizar_4(self):
 		resultado =  cotizar_seguro('Guayaquil', 60, 'mujer', 'casado', '', 12)
 		self.assertEqual(resultado,"No se puede realizar una cotización para el valor ingresado de dependientes.")
+	
+
 	def test_cotizar_5(self):
 		resultado =  cotizar_seguro('Manta', 60, 'mujer', 'casado', '', 2)
 		self.assertEqual(resultado,"Saludcita no opera en la ciudad ingresada.")
