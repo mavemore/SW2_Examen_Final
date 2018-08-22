@@ -91,28 +91,18 @@ class Test(unittest.TestCase):
 	def test_cotizador_21(self):
 		self.assertEqual(cotizador.cotizar_seguro("Guayaquil", 25, "masculino", "casado", "diabetes", 4),"El valor calculado de su cotización es de %.2f"%120.00)
 
-	#Masculino casado, 23 años, Guayaquil con diabetes y 8 dependientes.
-	def test_cotizador_22(self):
-		self.assertEqual(cotizador.cotizar_seguro("Guayaquil", 25, "masculino", "casado", "diabetes", 8),"Solo se puede realizar la cotización para hasta 4 dependientes en línea. \
-		Por favor acérquese a la agencia y presente una solicitud.")
-
-	#Mujer casado, 20 años, Guayaquil con diabetes y 8 dependientes.
-	def test_cotizador_23(self):
-		self.assertEqual(cotizador.cotizar_seguro("Guayaquil", 20, "mujer", "casado", "diabetes", 8),"Solo se puede realizar la cotización para hasta 4 dependientes en línea. \
-			Por favor acérquese a la agencia y presente una solicitud.")
-
 	#Masculino casado, 25 años, Guayaquil con diabetes y 10 dependientes.
-	def test_cotizador_24(self):
+	def test_cotizador_22(self):
 		self.assertEqual(cotizador.cotizar_seguro("Guayaquil", 25, "masculino", "casado", "diabetes", 10),"No se puede realizar una cotización para el valor ingresado de dependientes.")
 	#Mujer viudo, 70 años, Quito con diabetes y 10 dependientes.
-	def test_cotizador_25(self):
+	def test_cotizador_23(self):
 		self.assertEqual(cotizador.cotizar_seguro("Guayaquil", 20, "mujer", "casado", "diabetes", 10),"No se puede realizar una cotización para el valor ingresado de dependientes.")
 	#Hombre viudo, 70 años, Quito con diabetes y 10 dependientes.
-	def test_cotizador_26(self):
+	def test_cotizador_24(self):
 		self.assertEqual(cotizador.cotizar_seguro("Quevedo", 20, "hombre", "viudo", None, 10),"Saludcita no opera en la ciudad ingresada.")
 	
 	#Hombre viudo, 70 años, Quito con diabetes y 10 dependientes.
-	def test_cotizador_27(self):
+	def test_cotizador_25(self):
 		self.assertEqual(cotizador.cotizar_seguro('Quito',70,'hombre','viudo','diabetes',10),"No se puede realizar una cotización para el valor ingresado de dependientes.")
 
 if __name__ == '__main__':
