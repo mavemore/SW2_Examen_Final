@@ -15,3 +15,5 @@
 4. Una vez que corra las pruebas exitosamente, suba los cambios en su rama y observe en Travis y Coveralls los resultados.
 
 		git push origin [nombre_apellido1_apellido2]
+
+[![Coverage Status](https://coveralls.io/repos/github/mavemore/SW2_Examen_Final_tema_1/badge.svg)](https://coveralls.io/github/mavemore/SW2_Examen_Final_tema_1)

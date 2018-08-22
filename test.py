@@ -63,9 +63,28 @@ class Test(unittest.TestCase):
 		self.assertEqual(50,valor_adicional)
 
 	def test_cotizador_15(self):
-		seguro = cotizar_seguro("Guayaquil"70,"hombre", "soltero","cancer",1)
-		self.assertEqual(50,seguro)
+		seguro = cotizar_seguro("",70,"hombre", "soltero","cancer",5)
+		self.assertEqual("Saludcita no opera en la ciudad ingresada.",seguro)
+
+	def test_cotizador_16(self):
+		seguro = cotizar_seguro("Guayaquil",70,"hombre", "soltero","cancer",50)
+		self.assertEqual("No se puede realizar una cotización para el valor ingresado de dependientes.",seguro)
+
+	def test_cotizador_17(self):
+		seguro = cotizar_seguro("Guayaquil",70,"hombre", "soltero","cancer",5)
+		self.assertEqual("Solo se puede realizar la cotización para hasta 4 dependientes en línea. \
+			Por favor acérquese a la agencia y presente una solicitud.",seguro)
 
 
+	def test_cotizador_18(self):
+		seguro = cotizar_seguro("Guayaquil",80,"hombre", "soltero","cancer",4)
+		print(seguro)
+		self.assertEqual("La edad ingresada no es válida. Debe de encontrarse entre 18 y 75 años.",seguro)
+
+
+	def test_cotizador_19(self):
+		seguro = cotizar_seguro("Guayaquil",18,"mujer", "soltero","cancer",0)
+		self.assertEqual("El valor calculado de su cotización es de 40.00",seguro)
+	
 if __name__ == '__main__':
 	unittest.main()
