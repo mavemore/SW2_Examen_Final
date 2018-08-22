@@ -75,7 +75,7 @@ class Test(unittest.TestCase):
 		self.assertEqual(adicional,50)
 
 	
-	def test_calcular_valores_adicionales_8(self):
+	def test_calcular_valores_adicionales_9(self):
 		adicional =  calcular_valores_adicionales(70, 'hombre', 'soltero', 'diabetes')
 		self.assertEqual(adicional,50)
 
@@ -84,7 +84,7 @@ class Test(unittest.TestCase):
 	def test_cotizar_1(self):
 		resultado =  cotizar_seguro('Guayaquil', 35, 'mujer', 'casado', '', 4)
 		self.assertEqual(resultado,"El valor calculado de su cotización es de %.2f"%140)
-	
+
 
 	def test_cotizar_2(self):
 		resultado =  cotizar_seguro('Guayaquil', 80, 'mujer', 'casado', '', 4)
@@ -105,6 +105,11 @@ class Test(unittest.TestCase):
 	def test_cotizar_5(self):
 		resultado =  cotizar_seguro('Manta', 60, 'mujer', 'casado', '', 2)
 		self.assertEqual(resultado,"Saludcita no opera en la ciudad ingresada.")
+
+
+	def test_cotizar_6(self):
+		resultado =  cotizar_seguro('Quito', 35, 'hombre', 'soltero', '', 4)
+		self.assertEqual(resultado,"El valor calculado de su cotización es de %.2f"%160)
 
 
 
