@@ -6,8 +6,6 @@ import src.cotizador as cotizador
 
 class Test(unittest.TestCase):
 	#Incluya una pequeña descripción de lo que se prueba.
-	def test_cotizador_ID1(self):
-		self.assertEqual(cotizador.cotizar_seguro("Guayaquil", 20, "mujer", "casado", "cancer", 1),"El valor calculado de su cotización es de %.2f"%80.00)
 	def test_cotizador_ID(self):
 		self.assertEqual('','')
 	#Numero de dependientes 0
