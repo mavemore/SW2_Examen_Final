@@ -278,6 +278,26 @@ class Test(unittest.TestCase):
 		resultado = src.cotizador.cotizar_seguro("Quito",30, "hombre","divorciado","",4)
 		self.assertEqual(resultado, "El valor calculado de su cotización es de 120.00")
 
+	#Hombre, soltero, 10 años, Quito
+	def test_cotizador_54(self):
+		resultado = src.cotizador.cotizar_seguro("Quito",10, "hombre","soltero","",0)
+		self.assertEqual(resultado, "La edad ingresada no es válida. Debe de encontrarse entre 18 y 75 años.")
+	
+	#Hombre, casado, 30 años, 6 hijos, Quito
+	def test_cotizador_55(self):
+		resultado = src.cotizador.cotizar_seguro("Quito",30, "hombre","casado","",6)
+		self.assertEqual(resultado, "Solo se puede realizar la cotización para hasta 4 dependientes en línea. \
+			Por favor acérquese a la agencia y presente una solicitud.")
+		
+	#Hombre, casado, 30 años, 11 hijos, Quito
+	def test_cotizador_56(self):
+		resultado = src.cotizador.cotizar_seguro("Quito",30, "hombre","casado","",11)
+		self.assertEqual(resultado,"No se puede realizar una cotización para el valor ingresado de dependientes.")
+
+	#Hombre, divorciado, 30 años, 4 hijos, Portoviejo
+	def test_cotizador_57(self):
+		resultado = src.cotizador.cotizar_seguro("Portoviejo",30, "hombre","divorciado","",4)
+		self.assertEqual(resultado, "Saludcita no opera en la ciudad ingresada.")
 
 if __name__ == '__main__':
 	unittest.main()
