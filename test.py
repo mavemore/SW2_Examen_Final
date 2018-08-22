@@ -6,10 +6,10 @@ import src.cotizador as cotizador
 
 class Test(unittest.TestCase):
 	#Incluya una pequeña descripción de lo que se prueba.
-	def test_cotizador_ID(self):
+	"""def test_cotizador_ID(self):
 		self.assertEqual('','')
+	"""
 	#Numero de dependientes 0
-
 	def test_calcular_cuota_basica_1(self):
 		valor = cotizador.calcular_cuota_basica(0)
 		self.assertEqual(valor,30)
